@@ -60,7 +60,11 @@
 </head>
 <body>
     <div class="container">
-        <h1>Blogcito</h1>
+        <h1 style="background: repeating-linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+               -webkit-background-clip: text;
+               -webkit-text-fill-color: transparent;">
+        Blogcito
+        </h1>
         {% for post in posts %}
         <div class="post">
             <h2><a href="{% url 'blog_application:post_detail' post.id %}">{{ post.title }}</a></h2>
@@ -71,5 +75,6 @@
         <p>No posts yet.</p>
         {% endfor %}
     </div>
+    
 </body>
 </html>
